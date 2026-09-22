@@ -183,6 +183,6 @@ terraform destroy
 - [x] Infraestrutura como código para AWS EC2 (`infra/`)
 - [x] Pipeline de CI/CD (GitHub Actions) em `.github/workflows/ci-cd.yml`
 - [x] Scanner de segurança (SonarQube) como gate obrigatório antes do deploy
-- [ ] `git push` para um repositório GitHub seu (passo manual, seção 3)
+- [x] `git push` para um repositório GitHub seu (passo manual, seção 3)
 - [ ] `terraform apply` na sua conta AWS (passo manual, seção 6)
 - [ ] Secrets cadastrados no repositório (passo manual, seção 4/7)

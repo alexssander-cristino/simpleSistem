@@ -1,0 +1,23 @@
+# Alternativa self-hosted ao SonarCloud: sobe um SonarQube local para testes/aula.
+# Uso:
+#   docker compose -f docker-compose.sonarqube.yml up -d
+#   -> acessar http://localhost:9000 (login padrão admin/admin, troca obrigatória)
+#   -> criar um token em: My Account > Security > Generate Token
+#   -> rodar o scanner (ver README.md, seção "Scan local com SonarQube self-hosted")
+services:
+  sonarqube:
+    image: sonarqube:community
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+
+volumes:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:

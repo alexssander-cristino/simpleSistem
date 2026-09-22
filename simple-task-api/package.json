@@ -1,0 +1,22 @@
+{
+  "name": "simple-task-api",
+  "version": "1.0.0",
+  "description": "API simples de tarefas, desenvolvida com a técnica SDD (Spec-Driven Development)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "jest --coverage",
+    "lint": "eslint src tests"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
